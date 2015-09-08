@@ -1,0 +1,37 @@
+@majorColor: #363636;
+@minorColor: #777;
+@redColor: #d53519; /* 文本标红强调 or 错误提示 */
+@linkColor: #007aff;
+
+html {
+    font-size: 10px;
+    line-height: 1.7;
+    font-family: Tahoma, /* "Heiti SC", "Microsoft Yahei",*/ Arial, sans-serif;
+}
+h1 { font-size: 2.4rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+p, th, td { font-size: 1.4rem; }
+ul li { font-size: 1.4rem; }
+ol li { font-size: 1.4rem; }
+img { width: 100%; height: auto; }
+
+h1, h2, h3, p, li, th, td, a { font-weight: normal; }
+h1, h2, h3, th { color: @majorColor; }
+p, li, td { color: @minorColor; }
+
+h1, h2, h3 { margin: 2.4rem 0 1.4rem 0; }
+p, ol, ul, table { margin: 1.4rem 0; }
+img { margin: 0 0 1rem 0; }
+
+a { color: @linkColor;
+    text-decoration: none;
+    &:link { color: @linkColor; }
+    &:visited { color: @linkColor; }
+    &:hover {
+            color: @linkColor;
+            cursor: pointer;
+            padding-bottom: .3rem;
+            border-bottom: 1px dotted @linkColor; }
+    &:active { color: @linkColor; }
+}
